@@ -33,3 +33,10 @@ C = A.intersection(B)
 print(f'выдать все числа, которые встречаются в А и В, то есть пересечение множеств: {C}')
 
 #Задача №2
+N = int(input('введите кол-во кустов = '))
+list_n = list(range(1,N+1))
+max_blueberries = list()
+for i in range(len(list_n) - 1):
+    max_blueberries.append(list_n[i - 1] + list_n[i] + list_n[i + 1])
+max_blueberries.append(list_n[-2] + list_n[-1] + list_n[0])
+print(max(max_blueberries))
